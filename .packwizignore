@@ -1,0 +1,24 @@
+# Ignored environments
+node_modules/
+automation/
+instance/
+.github/
+changelogs/
+.gemini/
+downloads/
+
+# Ignored files
+package.json
+bun.lock
+bun.lockb
+tsconfig.json
+index.ts
+AGENTS.md
+README.md
+DESCRIPTION.md
+PRISM_LAUNCHER.md
+.gitignore
+task.md
+walkthrough.md
+*.zip
+*.jar

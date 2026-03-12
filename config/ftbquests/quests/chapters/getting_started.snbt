@@ -1,0 +1,70 @@
+{
+	id: "0123456789ABCDEF"
+	group: ""
+	order_index: 0
+	filename: "getting_started"
+	title: "Getting Started"
+	icon: "minecraft:grass_block"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Welcome!"
+			icon: "minecraft:oak_sapling"
+			x: 0.0d
+			y: 0.0d
+			description: ["Welcome to the world of OneOne! This short quest series will help you survive."]
+			size: 1.5d
+			id: "1A2B3C4D5E6F7G8H"
+			tasks: [{
+				id: "2B3C4D5E6F7G8H9I"
+				type: "checkmark"
+				title: "Start the Adventure"
+			}]
+			rewards: [{
+				id: "3C4D5E6F7G8H9I0J"
+				type: "item"
+				item: "minecraft:apple"
+				count: 5
+			}]
+		}
+		{
+			title: "Collect Wood"
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["1A2B3C4D5E6F7G8H"]
+			id: "4D5E6F7G8H9I0J1K"
+			tasks: [{
+				id: "5E6F7G8H9I0J1K2L"
+				type: "item"
+				item: "minecraft:oak_log"
+				count: 8L
+				consume_items: false
+			}]
+			rewards: [{
+				id: "6F7G8H9I0J1K2L3M"
+				type: "xp"
+				xp: 100
+			}]
+		}
+		{
+			title: "Crafting Table"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["4D5E6F7G8H9I0J1K"]
+			id: "7G8H9I0J1K2L3M4N"
+			tasks: [{
+				id: "8H9I0J1K2L3M4N5O"
+				type: "item"
+				item: "minecraft:crafting_table"
+			}]
+			rewards: [{
+				id: "9I0J1K2L3M4N5O6P"
+				type: "item"
+				item: "minecraft:stick"
+				count: 4
+			}]
+		}
+	]
+	quest_links: [ ]
+}
