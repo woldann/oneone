@@ -1,5 +1,9 @@
 {
   "name": "oneone-scripts",
+  "author": "Serkan Aksoy",
+  "contributors": [
+    "Serkan Aksoy serkanaksy@proton.me"
+  ],
   "description": "Automation scripts and modpack management for the OneOne hardcore Skyblock experience.",
   "license": "MIT",
   "module": "automation/build.ts",
