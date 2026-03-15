@@ -1,7 +1,6 @@
 import { $ } from 'bun';
 import { getPackwizPath } from './get-packwiz';
 import { build } from './build';
-import ora from 'ora';
 import * as colors from 'yoctocolors';
 import { consola } from 'consola';
 
@@ -29,19 +28,17 @@ async function addMod() {
 
   const commandArgs = ['curseforge', 'add', ...args];
 
-  const spinner = ora(
-    colors.cyan(`Running packwiz ${commandArgs.join(' ')}...`),
-  ).start();
+  consola.info(colors.cyan(`Running packwiz ${commandArgs.join(' ')}...`));
 
   try {
-    // Run packwiz command with passed arguments
-    await $`${packwizPath} ${commandArgs}`.quiet();
+    // Run packwiz command interactively
+    await $`${packwizPath} ${commandArgs}`;
 
-    spinner.succeed(colors.green('Mod added successfully!'));
+    consola.success(colors.green('Mod added successfully!'));
     consola.start(colors.magenta('Starting build...\n'));
     await build();
   } catch (err) {
-    spinner.fail(colors.red(`Error: ${err}`));
+    consola.error(colors.red(`Error: ${err}`));
     process.exit(1);
   }
 }
