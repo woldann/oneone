@@ -1,4 +1,4 @@
-# 📦 Mod List (97)
+# 📦 Mod List (106)
 
 | Mod Name | Authors | Version | Link |
 | :--- | :--- | :--- | :--- |
@@ -15,8 +15,11 @@
 | **Applied Energistics 2 Wireless Terminals** | mari_023, Ridanisaurus, DomamaN202 | `15.3.3-forge` | [CurseForge](https://www.curseforge.com/projects/459929) |
 | **Applied Mekanistics** | ramidzkh | `1.4.3` | [CurseForge](https://www.curseforge.com/projects/574300) |
 | **Architectury API** | shedaniel | `9.2.14` | [CurseForge](https://www.curseforge.com/projects/419699) |
+| **Artifacts** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/312353) |
+| **Athena** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/841890) |
 | **AttributeFix** | Darkhax | `21.0.5` | [CurseForge](https://www.curseforge.com/projects/280510) |
 | **Balm** | BlayTheNinth | `7.3.38` | [CurseForge](https://www.curseforge.com/projects/531761) |
+| **Better Advancements** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/272515) |
 | **Better Third Person** | Socolio | `1.9.0` | [CurseForge](https://www.curseforge.com/projects/435044) |
 | **Blood Magic ** | WayofTime | `3.3.5-47` | [CurseForge](https://www.curseforge.com/projects/224791) |
 | **Bobby** | johni0702 | `5.0.1` | [CurseForge](https://www.curseforge.com/projects/409301) |
@@ -69,6 +72,7 @@
 | **Kotlin for Forge** | Unknown | `4.12.0-all` | [CurseForge](https://www.curseforge.com/projects/351264) |
 | **KubeJS** | LatvianModder | `2001.6.5-build.16` | [CurseForge](https://www.curseforge.com/projects/238086) |
 | **LambDynamicLights** | LambdAurora | `4.4.0+1.20.1` | [CurseForge](https://www.curseforge.com/projects/393442) |
+| **LibX** | ModdingX | `1.20.1-5.0.14` | [CurseForge](https://www.curseforge.com/projects/412525) |
 | **ME Requester** | Almost Reliable | `1.20.1-1.1.5` | [CurseForge](https://www.curseforge.com/projects/688367) |
 | **MEGA Cells** | 90 | `2.4.6-1.20.1` | [CurseForge](https://www.curseforge.com/projects/622112) |
 | **Mekalus (Oculus fork with fixed Mekanism MekaSuit rendering)** | KostromDan, NanoLive, dima_dencep, coderbot, IMS212, Justsnoopy30, FoundationGames | `1.8.0.1` | [CurseForge](https://www.curseforge.com/projects/1130957) |
@@ -76,10 +80,13 @@
 | **Mekanism Generators** | Aidancbrady, Thommy101, Thiakil, pupnewfster, dizzyd | `10.4.16` | [CurseForge](https://www.curseforge.com/projects/268566) |
 | **Mekanism Tools** | Aidancbrady, Thommy101, Thiakil, pupnewfster, dizzyd | `10.4.16` | [CurseForge](https://www.curseforge.com/projects/268567) |
 | **Melody** | Keksuccino | `1.0.2` | [CurseForge](https://www.curseforge.com/projects/938643) |
+| **MmmMmmMmmMmm (Target Dummy)** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/225738) |
 | **Mod Menu** | Prospector, haykam821, TerraformersMC | `7.2.2` | [CurseForge](https://www.curseforge.com/projects/308702) |
 | **ModernFix** | embeddedt | `5.26.2+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/790626) |
+| **Moonlight Lib** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/499980) |
 | **Mouse Tweaks** | Ivan Molodetskikh (YaLTeR) | `2.25.1` | [CurseForge](https://www.curseforge.com/projects/60089) |
 | **Oculus** | NanoLive, dima_dencep, coderbot, IMS212, Justsnoopy30, FoundationGames | `1.8.0` | [CurseForge](https://www.curseforge.com/projects/581495) |
+| **Packet Fixer** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/689467) |
 | **Patchouli** | Vazkii | `1.20.1-85-FORGE` | [CurseForge](https://www.curseforge.com/projects/306770) |
 | **Placebo** | Shadows_of_Fire | `8.6.3` | [CurseForge](https://www.curseforge.com/projects/283644) |
 | **PneumaticCraft: Repressurized** | desht, MineMaarten | `6.0.22+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/281849) |
@@ -90,9 +97,11 @@
 | **Rhino** | latvian.dev, Mozilla | `2001.2.3-build.10` | [CurseForge](https://www.curseforge.com/projects/416294) |
 | **Searchables** | Jaredlll08 | `1.0.3` | [CurseForge](https://www.curseforge.com/projects/858542) |
 | **ShatterLib \| OctoLib** | OctoStudios | `0.5.0.1` | [CurseForge](https://www.curseforge.com/projects/916747) |
+| **Skyblock Builder** | MelanX | `1.20.1-5.1.28` | [CurseForge](https://www.curseforge.com/projects/446691) |
 | **Sodium/Embeddium Extras** | toni | `1.0.6` | [CurseForge](https://www.curseforge.com/projects/558905) |
 | **Sodium/Embeddium Options API** | toni | `1.0.10` | [CurseForge](https://www.curseforge.com/projects/1103431) |
 | **Sodium/Embeddium Options Mod Compat** | Toni, DeeChael | `1.0.0` | [CurseForge](https://www.curseforge.com/projects/1146393) |
+| **Sound Physics Remastered** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/535489) |
 | **spark** | Luck | `1.10.53` | [CurseForge](https://www.curseforge.com/projects/361579) |
 | **Trinkets (Fabric)** | Emi, C4 | `3.7.2` | [CurseForge](https://www.curseforge.com/projects/341284) |
 | **TxniLib** | Toni | `1.0.24` | [CurseForge](https://www.curseforge.com/projects/1104882) |
