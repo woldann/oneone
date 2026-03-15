@@ -1,5 +1,6 @@
 import { $ } from 'bun';
 import { getPackwizPath } from './get-packwiz';
+import { build } from './build';
 
 async function addMod() {
   const packwizPath = await getPackwizPath();
@@ -26,8 +27,11 @@ async function addMod() {
   try {
     // Run packwiz command with passed arguments
     await $`${packwizPath} ${commandArgs}`;
+
+    console.log('\n✅ Mod added successfully! Starting build...');
+    await build();
   } catch (err) {
-    console.error(`❌ Error running packwiz: ${err}`);
+    console.error(`❌ Error: ${err}`);
     process.exit(1);
   }
 }

@@ -195,7 +195,7 @@ function syncLocalFolders() {
   }
 }
 
-async function build() {
+export async function build() {
   console.log('🛠️  Starting Instance Build Process...');
 
   if (!existsSync(INSTANCE_DIR)) {
@@ -237,4 +237,6 @@ async function build() {
   console.log('\n✨ Instance build completed!');
 }
 
-build().catch(console.error);
+if (import.meta.main) {
+  build().catch(console.error);
+}
