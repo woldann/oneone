@@ -184,6 +184,11 @@ hash = "71a33fe41bead909b3e95643351ef8015def70d3cb083916469f492f66434b45"
 metafile = true
 
 [[files]]
+file = "mods/chisels-bits.pw.toml"
+hash = "bb8b36ded9744d09db566e56b13368b6f4396180b531b36323982c852bea09d2"
+metafile = true
+
+[[files]]
 file = "mods/chloride.pw.toml"
 hash = "72a88bd8043afbcab6b9541e17e3494377cf54342791ecafee01ac402eff9089"
 metafile = true
@@ -229,6 +234,11 @@ hash = "9f2bb57e05bad305f03c25c275c6d11e952835a41b2da68dba10a0bd1f3f6261"
 metafile = true
 
 [[files]]
+file = "mods/cosmetic-armor-reworked.pw.toml"
+hash = "cfa8aa9c0437721dab2057c932c9cf8ec3d3a11f672040601305238d13df85e8"
+metafile = true
+
+[[files]]
 file = "mods/crafttweaker.pw.toml"
 hash = "c986ab44a5f021f16ccdc9e100f77a146b1182918f6f01b12a5c672a2203d6a4"
 metafile = true
@@ -256,6 +266,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "1315cd56b0b4a5b3d53374cebf4f1f3cd0546b05058740847bd226c1d1ccab39"
+metafile = true
+
+[[files]]
+file = "mods/default-options.pw.toml"
+hash = "91e64b2bf3b7011473fc138e5e93686233622fb0188bbf1d1113abadac5e42d7"
 metafile = true
 
 [[files]]
@@ -751,6 +766,11 @@ metafile = true
 [[files]]
 file = "mods/tool-belt.pw.toml"
 hash = "085d67a04dc1c51ab204714b02d4082de957ee8541be4a69a59f1b6895734638"
+metafile = true
+
+[[files]]
+file = "mods/torchmaster.pw.toml"
+hash = "51e82d9320effbd610ccfe4571c048c7d0f9c98362b9884faabfaa6f63aa9737"
 metafile = true
 
 [[files]]
