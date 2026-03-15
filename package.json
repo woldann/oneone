@@ -30,7 +30,6 @@
     "consola": "^3.4.2",
     "ora": "^9.3.0",
     "prismarine-nbt": "^2.8.0",
-    "typescript": "^5.9.3",
     "yoctocolors": "^2.1.2"
   }
 }
