@@ -49,6 +49,16 @@ hash = "8f7696617249a4be35a9d1a2caecce4e17bbffe823f904d10c6fc8b72c4352ca"
 metafile = true
 
 [[files]]
+file = "mods/alexs-delight.pw.toml"
+hash = "99f6d4e46f784953d16aa1ce5f72327b21487dc0e27d3143c8a6b60c6d02381a"
+metafile = true
+
+[[files]]
+file = "mods/alexs-mobs.pw.toml"
+hash = "5e1239fd67c97c042d09cf38664698c9d1a3cfbc50d779fc550c461cf6aeb565"
+metafile = true
+
+[[files]]
 file = "mods/alltheleaks.pw.toml"
 hash = "40bab1828ae2b4d755db64f1c887a2fe06171fad6ab54d4a1863ca5c30ff9b55"
 metafile = true
@@ -144,6 +154,11 @@ hash = "31862fa4fcae1cd40268e143d166327274d76b365fd1f1fb78e9fae4fdc34cb1"
 metafile = true
 
 [[files]]
+file = "mods/brewin-and-chewin.pw.toml"
+hash = "dc45e2a3431d818f9bb2b7217a62e62ec8f455ca37b9f4f35947d2c442bad42b"
+metafile = true
+
+[[files]]
 file = "mods/carry-on.pw.toml"
 hash = "ba1bdad41e3c9ec131330f048fc6f9bcb753ca3e9bfa1e41d60d6ca11afbc2e6"
 metafile = true
@@ -151,6 +166,11 @@ metafile = true
 [[files]]
 file = "mods/chat-heads.pw.toml"
 hash = "a22f9b83935cfa308f328ec4e5bd8bbf7e41d650e427904bb971d4f66fcb5b77"
+metafile = true
+
+[[files]]
+file = "mods/chefs-delight-forge.pw.toml"
+hash = "c280846e9a6599055814a024ad5b5212344a8c02a955d0e779cca7aa2244fd4f"
 metafile = true
 
 [[files]]
@@ -171,6 +191,11 @@ metafile = true
 [[files]]
 file = "mods/chunk-sending-forge-fabric.pw.toml"
 hash = "86252c4e6701b798dac5ddef4b0fa6b6f5bdb280e83945b5b98d7c0be4441a35"
+metafile = true
+
+[[files]]
+file = "mods/citadel.pw.toml"
+hash = "5a4b03567f23fe0aac7806bd7cc9734138bf5fc098e98c1bb552d5b288bef258"
 metafile = true
 
 [[files]]
@@ -231,6 +256,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "1315cd56b0b4a5b3d53374cebf4f1f3cd0546b05058740847bd226c1d1ccab39"
+metafile = true
+
+[[files]]
+file = "mods/delightful.pw.toml"
+hash = "f6f19441deb7a82aba8afe2421758930854518ed7e9e3de56583217227f39bff"
 metafile = true
 
 [[files]]
@@ -321,6 +351,16 @@ metafile = true
 [[files]]
 file = "mods/fancymenu.pw.toml"
 hash = "fa9aa329bdbefc9430cdc17bf44456c278eb3a3632956b472f71f97df6c2f9a4"
+metafile = true
+
+[[files]]
+file = "mods/farmers-delight.pw.toml"
+hash = "99876b4f4941ce79c052275c1b10530b1581cc86479c4b0252e9c8b0bc93f8b7"
+metafile = true
+
+[[files]]
+file = "mods/farmers-respite.pw.toml"
+hash = "49431cb48a66b264c2cb7702c7bb80155d1a59a42d384348e30700ce0ebc1e4c"
 metafile = true
 
 [[files]]
@@ -624,11 +664,6 @@ hash = "ca4411ac6d8a9a892948bb63cd0ba52ae5523ca5e257632d6ae8c933b660c5ee"
 metafile = true
 
 [[files]]
-file = "mods/rightclickharvest.pw.toml"
-hash = "33232510f247888ae35f261b26345f0f3c5f0daee0adbc0311aac2d5bb324a1d"
-metafile = true
-
-[[files]]
 file = "mods/searchables.pw.toml"
 hash = "2cb8dd9a3944a6430b49916a4fe1b6cf0bd7efd907054f8e679a02717149404f"
 metafile = true
@@ -666,6 +701,16 @@ metafile = true
 [[files]]
 file = "mods/skyblock-builder.pw.toml"
 hash = "9f04c8bcaf9b9f37c154c5a76d8bc7b1493f6c1aec0f182ca0ba4b8e3df0bdfc"
+metafile = true
+
+[[files]]
+file = "mods/slice-and-dice.pw.toml"
+hash = "9b59e9b08c1281a521777e9924dab6c258e42c5d1c06852b9ebe9304021aec42"
+metafile = true
+
+[[files]]
+file = "mods/smarter-farmers-farmers-replant.pw.toml"
+hash = "87caea00305cfee9c1062f10f61a1cb8897ca884361744151d9bc02845c84037"
 metafile = true
 
 [[files]]
