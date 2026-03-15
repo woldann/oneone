@@ -144,6 +144,11 @@ hash = "a22f9b83935cfa308f328ec4e5bd8bbf7e41d650e427904bb971d4f66fcb5b77"
 metafile = true
 
 [[files]]
+file = "mods/chipped.pw.toml"
+hash = "71a33fe41bead909b3e95643351ef8015def70d3cb083916469f492f66434b45"
+metafile = true
+
+[[files]]
 file = "mods/chloride.pw.toml"
 hash = "72a88bd8043afbcab6b9541e17e3494377cf54342791ecafee01ac402eff9089"
 metafile = true
@@ -491,6 +496,11 @@ metafile = true
 [[files]]
 file = "mods/relics-mod.pw.toml"
 hash = "fa3c0a19b839ec89df408368ae4886ffa36179c1973335ce7cd4654f2fa842ca"
+metafile = true
+
+[[files]]
+file = "mods/resourceful-lib.pw.toml"
+hash = "ef0264b7d819848f72ab2f34643306187e712965a8246e1f733e1bd39d8fd681"
 metafile = true
 
 [[files]]
