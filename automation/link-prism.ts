@@ -10,10 +10,16 @@ import {
 import { homedir } from 'node:os';
 
 // Configuration
-const PRISM_INSTANCE_PATH = join(
-  homedir(),
-  '.local/share/PrismLauncher/instances/OneOne Dev/minecraft/',
-);
+const PRISM_INSTANCE_PATH =
+  process.platform === 'win32'
+    ? join(
+        homedir(),
+        'AppData/Roaming/PrismLauncher/instances/OneOne Dev/minecraft/',
+      )
+    : join(
+        homedir(),
+        '.local/share/PrismLauncher/instances/OneOne Dev/minecraft/',
+      );
 const PROJECT_INSTANCE_PATH = join(import.meta.dir, '../instance');
 
 // Folders to link
