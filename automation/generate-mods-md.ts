@@ -1,6 +1,8 @@
 import { Glob } from 'bun';
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
+import { consola } from 'consola';
+import * as colors from 'yoctocolors';
 
 const MODS_DIR = 'mods';
 const INSTANCE_MODS_DIR = 'instance/mods';
@@ -96,7 +98,7 @@ async function getModMetadata(jarPath: string, filename: string) {
       }
     }
   } catch (e) {
-    console.error(`Error reading metadata for ${jarPath}:`, e);
+    consola.error(colors.red(`Error reading metadata for ${jarPath}:`), e);
   }
 
   return metadata;
@@ -110,6 +112,8 @@ interface Mod {
 }
 
 async function generate() {
+  consola.start(colors.cyan('Generating Mod List...'));
+
   const glob = new Glob('*.pw.toml');
   const modFiles = Array.from(glob.scanSync(MODS_DIR));
 
@@ -142,7 +146,7 @@ async function generate() {
 
   mods.sort((a, b) => a.name.localeCompare(b.name));
 
-  let markdown = `# 📦 Mod List (${mods.length})\n\n`;
+  let markdown = `# Mod List (${mods.length})\n\n`;
   markdown += '| Mod Name | Authors | Version | Link |\n';
   markdown += '| :--- | :--- | :--- | :--- |\n';
 
@@ -154,7 +158,9 @@ async function generate() {
   }
 
   writeFileSync(OUTPUT_FILE, markdown);
-  console.log(`✨ Generated ${OUTPUT_FILE} with ${mods.length} mods!`);
+  consola.success(
+    colors.green(`Generated ${OUTPUT_FILE} with ${mods.length} mods!`),
+  );
 }
 
 generate();

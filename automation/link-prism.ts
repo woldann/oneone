@@ -8,6 +8,9 @@ import {
   rmSync,
 } from 'node:fs';
 import { homedir } from 'node:os';
+import ora from 'ora';
+import * as colors from 'yoctocolors';
+import { consola } from 'consola';
 
 // Configuration
 const PRISM_INSTANCE_PATH =
@@ -26,20 +29,21 @@ const PROJECT_INSTANCE_PATH = join(import.meta.dir, '../instance');
 const FOLDERS_TO_LINK = ['mods', 'config', 'resourcepacks', 'shaderpacks'];
 
 async function linkPrism() {
-  console.log('🔗 Starting Prism Launcher Linking Automation...');
-  console.log(`Target: ${PRISM_INSTANCE_PATH}`);
+  consola.info(colors.bold(colors.magenta('OneOne Prism Launcher Automation')));
 
   if (!existsSync(PROJECT_INSTANCE_PATH)) {
-    console.log('Creating project instance directory...');
+    consola.info('Creating project instance directory...');
     mkdirSync(PROJECT_INSTANCE_PATH, { recursive: true });
   }
 
   if (!existsSync(PRISM_INSTANCE_PATH)) {
-    console.error(
-      `❌ Error: Prism instance path not found: ${PRISM_INSTANCE_PATH}`,
+    consola.error(
+      colors.red(`Prism instance path not found: ${PRISM_INSTANCE_PATH}`),
     );
-    console.log(
-      "Please make sure the instance 'OneOne Dev' exists in Prism Launcher.",
+    consola.info(
+      colors.yellow(
+        "Please make sure the instance 'OneOne Dev' exists in Prism Launcher.",
+      ),
     );
     process.exit(1);
   }
@@ -47,6 +51,8 @@ async function linkPrism() {
   for (const folder of FOLDERS_TO_LINK) {
     const source = join(PROJECT_INSTANCE_PATH, folder);
     const target = join(PRISM_INSTANCE_PATH, folder);
+
+    const spinner = ora(colors.cyan(`Processing ${folder}...`)).start();
 
     // Ensure source exists in project (even if empty)
     if (!existsSync(source)) {
@@ -57,14 +63,16 @@ async function linkPrism() {
       const stats = lstatSync(target);
 
       if (stats.isSymbolicLink()) {
-        console.log(`[SKIP] ${folder} is already a symbolic link.`);
+        spinner.info(colors.dim(`${folder} is already a symbolic link.`));
         continue;
       } else {
         // It's a real directory, back it up
         const backupPath = `${target}.bak`;
-        console.log(`[BACKUP] Moving existing ${folder} to ${folder}.bak`);
+        spinner.text = colors.yellow(
+          `Backing up existing ${folder} to ${folder}.bak...`,
+        );
 
-        // If backup already exists, remove it first or name it differently
+        // If backup already exists, remove it first
         if (existsSync(backupPath)) {
           rmSync(backupPath, { recursive: true, force: true });
         }
@@ -73,19 +81,26 @@ async function linkPrism() {
       }
     }
 
-    console.log(`[LINK] Creating symlink for ${folder}...`);
+    spinner.text = colors.cyan(`Creating symlink for ${folder}...`);
     try {
       symlinkSync(source, target, 'dir');
-      console.log(`[OK] Linked ${folder} successfully.`);
+      spinner.succeed(colors.green(`Linked ${folder} successfully.`));
     } catch (err) {
-      console.error(`[ERROR] Failed to link ${folder}: ${err}`);
+      spinner.fail(colors.red(`Failed to link ${folder}: ${err}`));
     }
   }
 
-  console.log('\n✅ Prism Launcher linking completed successfully!');
-  console.log(
-    "You can now launch the 'OneOne Dev' instance in Prism Launcher.",
+  consola.success(
+    colors.bold(colors.green('Prism Launcher linking completed!')),
+  );
+  consola.info(
+    colors.cyan(
+      "You can now launch the 'OneOne Dev' instance in Prism Launcher.",
+    ),
   );
 }
 
-linkPrism().catch(console.error);
+linkPrism().catch((err) => {
+  consola.error(err);
+  process.exit(1);
+});

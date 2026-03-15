@@ -1,6 +1,9 @@
 import { $ } from 'bun';
 import { join } from 'node:path';
 import { existsSync, mkdirSync, readFileSync, rmSync, cpSync } from 'node:fs';
+import ora from 'ora';
+import * as colors from 'yoctocolors';
+import { consola } from 'consola';
 
 // Directories
 const ROOT_DIR = join(import.meta.dir, '../');
@@ -50,13 +53,13 @@ async function verifyHash(
     const computedHash = hasher.digest('hex');
     return computedHash === expectedHash;
   } catch (err) {
-    console.error(`Hash verification error: ${err}`);
+    consola.error(colors.red(`Hash verification error: ${err}`));
     return false;
   }
 }
 
 async function syncPackwizAssets(useAria2: boolean) {
-  console.log('📦 Syncing Packwiz Managed Assets...');
+  const spinner = ora(colors.cyan('Syncing Packwiz Managed Assets...')).start();
 
   const indexRaw = readFileSync(INDEX_PATH, 'utf-8');
   const files = parseIndexToml(indexRaw);
@@ -68,6 +71,8 @@ async function syncPackwizAssets(useAria2: boolean) {
         f.file.startsWith('shaderpacks/') ||
         f.file.startsWith('resourcepacks/')),
   );
+
+  let successCount = 0;
 
   for (const mod of metaFiles) {
     const modTomlPath = join(ROOT_DIR, mod.file);
@@ -128,8 +133,10 @@ async function syncPackwizAssets(useAria2: boolean) {
           if (isValid) {
             cachedAndVerified = true;
           } else {
-            console.log(
-              `[CACHE MISMATCH] ${filename} hash failed. Redownloading...`,
+            spinner.warn(
+              colors.yellow(
+                `[CACHE MISMATCH] ${filename} hash failed. Redownloading...`,
+              ),
             );
             rmSync(cachePath);
           }
@@ -140,7 +147,7 @@ async function syncPackwizAssets(useAria2: boolean) {
 
       // Step 2: Download if not in cache
       if (!cachedAndVerified) {
-        console.log(`[DOWNLOAD] Fetching ${filename} to ${subfolder} cache...`);
+        spinner.text = colors.cyan(`Downloading ${filename}...`);
         try {
           if (useAria2) {
             await $`aria2c -x 16 -s 16 -d ${cacheDir} -o ${filename} "${downloadUrl}"`.quiet();
@@ -155,48 +162,53 @@ async function syncPackwizAssets(useAria2: boolean) {
           if (fileHash) {
             const isValid = await verifyHash(cachePath, fileHash, fileHashAlgo);
             if (!isValid) {
-              console.error(`[ERROR] ${filename} hash verification failed!`);
+              spinner.fail(
+                colors.red(`[ERROR] ${filename} hash verification failed!`),
+              );
               rmSync(cachePath);
               continue;
             }
           }
         } catch (err) {
-          console.error(`[ERROR] Failed to download ${filename}: ${err}`);
+          spinner.fail(
+            colors.red(`[ERROR] Failed to download ${filename}: ${err}`),
+          );
           continue;
         }
       }
 
       // Step 3: Copy from cache to instance
       if (!existsSync(targetPath)) {
-        console.log(`[COPY] ${filename} to instance...`);
         cpSync(cachePath, targetPath);
-      } else {
-        // If it exists in instance, maybe check hash too but copying is fast enough
-        // For now, if it exists in instance, we assume it's good because we just verified cache
-        console.log(`[OK] ${filename} verified.`);
       }
+      successCount++;
     }
   }
+  spinner.succeed(
+    colors.green(`Packwiz sync completed! (${successCount} files)`),
+  );
 }
 
 function syncLocalFolders() {
-  console.log('📂 Syncing Local Project Folders...');
+  const spinner = ora(colors.cyan('Syncing Local Project Folders...')).start();
+  let syncCount = 0;
   for (const folder of STATIC_FOLDERS) {
     const source = join(ROOT_DIR, folder);
     const target = join(INSTANCE_DIR, folder);
 
     if (existsSync(source)) {
-      console.log(`[SYNC] Copying ${folder} to instance...`);
       if (!existsSync(target)) mkdirSync(target, { recursive: true });
 
       // Perform recursive copy
       cpSync(source, target, { recursive: true, force: true });
+      syncCount++;
     }
   }
+  spinner.succeed(colors.green(`Local folders synced! (${syncCount} folders)`));
 }
 
 export async function build() {
-  console.log('🛠️  Starting Instance Build Process...');
+  consola.info(colors.bold(colors.magenta('OneOne Instance Build Process')));
 
   if (!existsSync(INSTANCE_DIR)) {
     mkdirSync(INSTANCE_DIR, { recursive: true });
@@ -212,13 +224,15 @@ export async function build() {
     const req = await $`command -v aria2c`.quiet();
     if (req.exitCode === 0) useAria2 = true;
   } catch {
-    // aria2c not found, use default downloader
+    // aria2c not found
   }
 
-  if (useAria2) console.log('⚡ Fast download mode active');
+  if (useAria2) consola.info(colors.dim('Fast download mode (aria2c) active'));
 
-  // 1. Clear instance subfolders to prevent remnants
-  console.log('🧹 Cleaning instance subfolders...');
+  // 1. Clear instance subfolders
+  const cleaningSpinner = ora(
+    colors.cyan('Cleaning instance subfolders...'),
+  ).start();
   const foldersToClear = ['mods', 'shaderpacks', 'resourcepacks'];
   for (const folder of foldersToClear) {
     const target = join(INSTANCE_DIR, folder);
@@ -227,6 +241,7 @@ export async function build() {
     }
     mkdirSync(target, { recursive: true });
   }
+  cleaningSpinner.succeed(colors.green('Cleanup completed!'));
 
   // 2. Sync assets from Packwiz
   await syncPackwizAssets(useAria2);
@@ -234,9 +249,14 @@ export async function build() {
   // 3. Sync local project folders
   syncLocalFolders();
 
-  console.log('\n✨ Instance build completed!');
+  consola.success(
+    colors.bold(colors.green('Instance build completed successfully!')),
+  );
 }
 
 if (import.meta.main) {
-  build().catch(console.error);
+  build().catch((err) => {
+    consola.error(colors.red(`\nBuild failed: ${err}`));
+    process.exit(1);
+  });
 }
