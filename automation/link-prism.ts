@@ -39,7 +39,7 @@ async function linkPrism() {
       `❌ Error: Prism instance path not found: ${PRISM_INSTANCE_PATH}`,
     );
     console.log(
-      "Please make sure the instance 'OneOne 1.20.1' exists in Prism Launcher.",
+      "Please make sure the instance 'OneOne Dev' exists in Prism Launcher.",
     );
     process.exit(1);
   }
@@ -84,7 +84,7 @@ async function linkPrism() {
 
   console.log('\n✅ Prism Launcher linking completed successfully!');
   console.log(
-    "You can now launch the 'OneOne 1.20.1' instance in Prism Launcher.",
+    "You can now launch the 'OneOne Dev' instance in Prism Launcher.",
   );
 }
 

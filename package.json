@@ -8,6 +8,7 @@
     "start": "bun run build",
     "build": "bun run automation/build.ts",
     "rebuild": "rm -rf instance && bun run build",
+    "add": "bun run automation/add.ts",
     "link-prism": "bun run automation/link-prism.ts",
     "lint": "eslint \"{automation,kubejs}/**/*.ts\" --cache",
     "lint:fix": "eslint \"{automation,kubejs}/**/*.ts\" --fix",
