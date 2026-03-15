@@ -569,6 +569,11 @@ hash = "c08817fe8025a9d62c8f7abd5f56a54b90673e5ab60f39ae8fa1d70d5ace529b"
 metafile = true
 
 [[files]]
+file = "mods/yeetusexperimentus.pw.toml"
+hash = "7dbe376c64d52ddc3e52ca6ce6b07d8c5d76bf9ef68d58267bb9e9c6d8fb2c09"
+metafile = true
+
+[[files]]
 file = "mods/zoomify.pw.toml"
 hash = "691e090328215d2bc82667316431287a0a888e09133c0f8e3ad8b2152cceb530"
 metafile = true
