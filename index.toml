@@ -49,6 +49,11 @@ hash = "8f7696617249a4be35a9d1a2caecce4e17bbffe823f904d10c6fc8b72c4352ca"
 metafile = true
 
 [[files]]
+file = "mods/ai-improvements.pw.toml"
+hash = "11c40209898628cc8ca75d28f539c449384b40600bfc88272306f6138f4e4428"
+metafile = true
+
+[[files]]
 file = "mods/alexs-delight.pw.toml"
 hash = "99f6d4e46f784953d16aa1ce5f72327b21487dc0e27d3143c8a6b60c6d02381a"
 metafile = true
@@ -314,6 +319,11 @@ hash = "7bb64cd8e6d14b65132c4d25d66cf499092f31816efdcbeef484bf73385440d9"
 metafile = true
 
 [[files]]
+file = "mods/emi-trades-villager-trading-emi-plugin.pw.toml"
+hash = "27b1964e1583318e348f75fcb6a955c47f0d8650fcef62c6a07b7b1891bd2526"
+metafile = true
+
+[[files]]
 file = "mods/emi.pw.toml"
 hash = "d48a1ea93de8cd5febb95ba52989d8d9ab4e998cfbdf9c1076a9f2e571d2fcbe"
 metafile = true
@@ -469,6 +479,11 @@ hash = "2621dfb5b3ad17a3adf927cc92a3bc6b0dd982c32f0265f920b29a61b34d182e"
 metafile = true
 
 [[files]]
+file = "mods/in-control.pw.toml"
+hash = "e35b44f12d02a3bb79a520d5a7436a7ead8a8adf32ecbe7b0bcac542d4047943"
+metafile = true
+
+[[files]]
 file = "mods/iron-chests.pw.toml"
 hash = "4aba12c2a18205fe6d25d1af817ee8c0baa580a74048cb30c659f6be66f31d2e"
 metafile = true
@@ -529,11 +544,6 @@ hash = "2c255a6aff5c016d8769777fd9e23f4bbc256d103fb45eef12b1d6af77249ba1"
 metafile = true
 
 [[files]]
-file = "mods/light-overlay.pw.toml"
-hash = "ec1dbea2c473bfd08357e3a31745ba28046debee77242e9c401169ddbc88bcd3"
-metafile = true
-
-[[files]]
 file = "mods/magnesium-extras.pw.toml"
 hash = "c8c25cccf1f0c3aaa0a5639f28f40d61b4eadd3130558b39ce6c279b8b775556"
 metafile = true
@@ -586,6 +596,11 @@ metafile = true
 [[files]]
 file = "mods/modmenu.pw.toml"
 hash = "66d1b7bc973830475a7bae8a5b823ec42fbc1ed1f4d4c514f1e6a21b20177810"
+metafile = true
+
+[[files]]
+file = "mods/more-overlays-updated.pw.toml"
+hash = "18155f139f536592c795f18eae975a82b0200f800693e873316b9157efb6df7b"
 metafile = true
 
 [[files]]

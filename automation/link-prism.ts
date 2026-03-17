@@ -26,7 +26,13 @@ const PRISM_INSTANCE_PATH =
 const PROJECT_INSTANCE_PATH = join(import.meta.dir, '../instance');
 
 // Folders to link
-const FOLDERS_TO_LINK = ['mods', 'config', 'resourcepacks', 'shaderpacks'];
+const FOLDERS_TO_LINK = [
+  'mods',
+  'config',
+  'resourcepacks',
+  'shaderpacks',
+  'kubejs',
+];
 
 async function linkPrism() {
   consola.info(colors.bold(colors.magenta('OneOne Prism Launcher Automation')));

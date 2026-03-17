@@ -14,6 +14,7 @@
     "rebuild": "rm -rf instance && bun run build",
     "add": "bun run automation/add.ts",
     "link-prism": "bun run automation/link-prism.ts",
+    "typecheck:kubejs": "bunx tsc -p kubejs/tsconfig.json",
     "lint": "eslint \"{automation,kubejs}/**/*.ts\" --cache",
     "lint:fix": "eslint \"{automation,kubejs}/**/*.ts\" --fix",
     "format": "prettier --write \"{automation,kubejs}/**/*.ts\"",

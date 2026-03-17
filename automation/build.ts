@@ -12,7 +12,7 @@ const DOWNLOADS_DIR = join(ROOT_DIR, 'downloads');
 const INDEX_PATH = join(ROOT_DIR, 'index.toml');
 
 // Folders to sync from ROOT to INSTANCE
-const STATIC_FOLDERS = ['config', 'kubejs'];
+const STATIC_FOLDERS = ['config', 'defaultconfigs', 'kubejs'];
 
 interface PackwizFile {
   file: string;
