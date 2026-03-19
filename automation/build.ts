@@ -189,10 +189,20 @@ async function syncPackwizAssets(useAria2: boolean) {
   );
 }
 
-function syncLocalFolders() {
-  const spinner = ora(colors.cyan('Syncing Local Project Folders...')).start();
+function syncLocalFolders(foldersToSync?: string[]) {
+  const folders =
+    foldersToSync && foldersToSync.length > 0 ? foldersToSync : STATIC_FOLDERS;
+  const spinner = ora(
+    colors.cyan(
+      `Syncing ${foldersToSync && foldersToSync.length > 0 ? 'Selected' : 'Local Project'} Folders...`,
+    ),
+  ).start();
   let syncCount = 0;
-  for (const folder of STATIC_FOLDERS) {
+  for (const folder of folders) {
+    if (!STATIC_FOLDERS.includes(folder)) {
+      consola.warn(colors.yellow(`Skipping unknown static folder: ${folder}`));
+      continue;
+    }
     const source = join(ROOT_DIR, folder);
     const target = join(INSTANCE_DIR, folder);
 
@@ -204,10 +214,26 @@ function syncLocalFolders() {
       syncCount++;
     }
   }
-  spinner.succeed(colors.green(`Local folders synced! (${syncCount} folders)`));
+  spinner.succeed(colors.green(`Folders synced! (${syncCount} folders)`));
 }
 
-export async function build() {
+function cleanBuildDir() {
+  const cleaningSpinner = ora(
+    colors.cyan('Cleaning instance subfolders...'),
+  ).start();
+  const foldersToClear = ['mods', 'shaderpacks', 'resourcepacks'];
+  for (const folder of foldersToClear) {
+    const target = join(INSTANCE_DIR, folder);
+    if (existsSync(target)) {
+      rmSync(target, { recursive: true, force: true });
+    }
+    mkdirSync(target, { recursive: true });
+  }
+  cleaningSpinner.succeed(colors.green('Cleanup completed!'));
+}
+
+export async function build(foldersToSync?: string[]) {
+  const isSelective = foldersToSync && foldersToSync.length > 0;
   consola.info(colors.bold(colors.magenta('OneOne Instance Build Process')));
 
   if (!existsSync(INSTANCE_DIR)) {
@@ -229,25 +255,18 @@ export async function build() {
 
   if (useAria2) consola.info(colors.dim('Fast download mode (aria2c) active'));
 
-  // 1. Clear instance subfolders
-  const cleaningSpinner = ora(
-    colors.cyan('Cleaning instance subfolders...'),
-  ).start();
-  const foldersToClear = ['mods', 'shaderpacks', 'resourcepacks'];
-  for (const folder of foldersToClear) {
-    const target = join(INSTANCE_DIR, folder);
-    if (existsSync(target)) {
-      rmSync(target, { recursive: true, force: true });
-    }
-    mkdirSync(target, { recursive: true });
+  if (!isSelective) {
+    // 1. Clear instance subfolders (Only for full builds)
+    cleanBuildDir();
+
+    // 2. Sync assets from Packwiz (Only for full builds)
+    await syncPackwizAssets(useAria2);
+  } else {
+    consola.info(colors.cyan('Performing selective folder sync...'));
   }
-  cleaningSpinner.succeed(colors.green('Cleanup completed!'));
 
-  // 2. Sync assets from Packwiz
-  await syncPackwizAssets(useAria2);
-
-  // 3. Sync local project folders
-  syncLocalFolders();
+  // 3. Sync local project folders (Selectively or all)
+  syncLocalFolders(foldersToSync);
 
   consola.success(
     colors.bold(colors.green('Instance build completed successfully!')),
@@ -255,7 +274,8 @@ export async function build() {
 }
 
 if (import.meta.main) {
-  build().catch((err) => {
+  const args = Bun.argv.slice(2);
+  build(args).catch((err) => {
     consola.error(colors.red(`\nBuild failed: ${err}`));
     process.exit(1);
   });

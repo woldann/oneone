@@ -1,0 +1,20 @@
+[
+  {
+    "phase": "start",
+    "mob": "minecraft:zombie",
+    "persecond": 500.0,
+    "attempts": 30000,
+    "amount": {
+      "minimum": 20,
+      "maximum": 50
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 24,
+      "maxdist": 32,
+      "minheight": 60,
+      "maxheight": 80,
+      "maxthis": 1
+    }
+  }
+]
