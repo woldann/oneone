@@ -1,14 +1,20 @@
 [
   {
     "phase": "start",
-    "mob": ["minecraft:creeper", "minecraft:skeleton", "minecraft:spider", "minecraft:phantom", "minecraft:enderman"],
+    "mob": [
+      "minecraft:creeper",
+      "minecraft:skeleton",
+      "minecraft:spider",
+      "minecraft:phantom",
+      "minecraft:enderman"
+    ],
     "result": "deny"
   },
   {
     "when": "finalize",
     "phase": "start",
     "mob": "minecraft:zombie",
-    "random": 0.8,
+    "random": 0.9,
     "helditem": "minecraft:iron_shovel",
     "result": "default"
   }

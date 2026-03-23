@@ -1,8 +1,8 @@
 /* global ServerEvents */
 
-/** 
+/**
  * Note: Command output capture in KubeJS 6 is not straightforward.
- * We use a global variable to store the phase status, which can be updated 
+ * We use a global variable to store the phase status, which can be updated
  * via an explicit check or during initialization.
  */
 let _isStartPhaseActive = false;
@@ -21,8 +21,8 @@ function isStartPhase() {
  * Update the start phase status by parsing the 'incontrol phases' command output.
  * @param {Internal.ServerJS} server
  */
-function refreshStartPhaseStatus(server) {
-  _isStartPhaseActive = hasStartPhaseIC(server);
+function refreshStartPhaseStatus() {
+  _isStartPhaseActive = hasStartPhaseIC();
 }
 
 /**

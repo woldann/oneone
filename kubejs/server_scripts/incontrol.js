@@ -1,7 +1,8 @@
+const EQUIPMENT_SLOTS = ['mainhand'];
 const START_PHASEIC = 'start';
 const $DataStorage = Java.loadClass('mcjty.incontrol.data.DataStorage');
 
-function getPhases() {
+function getPhasesIC() {
   try {
     if (!world) return '[]';
     return $DataStorage.getData(world).getPhases();
@@ -10,45 +11,55 @@ function getPhases() {
   }
 }
 
+function setPhaseIC(phaseName, value) {
+  try {
+    if (!world) return;
+    $DataStorage.getData(world).setPhase(phaseName, value);
+  } catch (e) {
+    return;
+  }
+}
+
 /**
  * Check if a specific phase is active using InControl's PhaseManager.
- * @param {Internal.ServerJS} server
  * @param {string} phaseName
  */
-function hasPhaseIC(server, phaseName) {
-  return getPhases().contains(phaseName);
+function hasPhaseIC(phaseName) {
+  return getPhasesIC().contains(phaseName);
 }
 
 /**
  * Add a phase using InControl command.
- * @param {Internal.ServerJS} server
  * @param {string} phaseName
  */
-function addPhaseIC(server, phaseName) {
-  server.runCommandSilent('incontrol setphase ' + phaseName);
+function addPhaseIC(phaseName) {
+  setPhaseIC(phaseName, true);
   refreshStartPhaseStatus(server);
 }
 
 /**
  * Remove a phase using InControl command.
- * @param {Internal.ServerJS} server
  * @param {string} phaseName
  */
-function removePhaseIC(server, phaseName) {
-  server.runCommandSilent('incontrol clearphase ' + phaseName);
+function removePhaseIC(phaseName) {
+  setPhaseIC(phaseName, false);
   refreshStartPhaseStatus(server);
 }
 
-function hasStartPhaseIC(server) {
-  return hasPhaseIC(server, START_PHASEIC);
+function hasStartPhaseIC() {
+  return hasPhaseIC(START_PHASEIC);
 }
 
-function addStartPhaseIC(server) {
-  addPhaseIC(server, START_PHASEIC);
+function addStartPhaseIC() {
+  addPhaseIC(START_PHASEIC);
 }
 
-function removeStartPhaseIC(server) {
-  removePhaseIC(server, START_PHASEIC);
+function removeStartPhaseIC() {
+  removePhaseIC(START_PHASEIC);
+}
+
+function hasAnyPhaseIC() {
+  return !getPhasesIC().equals('[]');
 }
 
 /**
@@ -57,29 +68,15 @@ function removeStartPhaseIC(server) {
  * Registered at top level to avoid duplicate listeners on reload.
  */
 EntityEvents.spawned((event) => {
-  if (isStartPhase() && event.entity.type === 'minecraft:zombie') {
-    let zombie = event.entity;
-    zombie.customName = getRandomName();
-    setPersisted(zombie);
+  const { entity, server } = event;
 
-    // 1. Set 85% drop chance for all equipment slots
-    try {
-      const equipmentSlots = ['mainhand'];
-      equipmentSlots.forEach(slot => {
-        zombie.setDropChance(slot, 0.85);
-
-        // 2. Ensure at least 50% durability
-        let item = zombie.getSlot(slot);
-        if (item && !item.empty && item.damageable) {
-          let maxDamage = item.maxDamage;
-          if (item.damageValue > maxDamage * 0.5) {
-            item.damageValue = Math.floor(maxDamage * 0.5);
-          }
-        }
-      });
-      event.server.tell('A zombie has been enhanced!');
-    } catch (e) {
-      event.server.tell('Enhance error: ' + e);
+  if (isStartPhase() && entity.type === 'minecraft:zombie') {
+    // If zombie was spawned with an iron shovel (via InControl), fix its durability
+    let mainHand = entity.getMainHandItem();
+    if (mainHand && mainHand.id === 'minecraft:iron_shovel') {
+      entity.customName = getRandomName();
+      setPersisted(entity);
+      entity.setDropChance('mainhand', 0.9);
     }
   }
 });

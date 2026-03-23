@@ -7,13 +7,13 @@ function setWorld(event) {
 
 LevelEvents.loaded((event) => {
   setWorld(event);
-})
+});
 
 function onReload(server) {
   if (loaded) return false;
   loaded = true;
   // One-time check for phases on load
-  refreshStartPhaseStatus(server);
+  refreshStartPhaseStatus();
 
   // Additional start-phase logic
   if (isStartPhase()) {
@@ -31,7 +31,7 @@ function onSetup(server) {
   return onReload(server);
 }
 
-PlayerEvents.loggedIn(event => {
+PlayerEvents.loggedIn((event) => {
   setWorld(event);
   onSetup(event.server);
 });
@@ -50,7 +50,7 @@ function onStartPhaseSetup(server) {
  */
 function onSetupWorld(server) {
   if (!server.persistentData.getBoolean('isWorldInitialized')) {
-    addStartPhaseIC(server);
+    addStartPhaseIC();
     server.persistentData.putBoolean('isWorldInitialized', true);
   }
 }

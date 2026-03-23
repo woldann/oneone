@@ -1,4 +1,4 @@
-# Mod List (170)
+# Mod List (180)
 
 | Mod Name | Authors | Version | Link |
 | :--- | :--- | :--- | :--- |
@@ -8,8 +8,7 @@
 | **Advancement Plaques [Neo/Forge]** | Grend | `1.6.9` | [CurseForge](https://www.curseforge.com/projects/499826) |
 | **AE2 EMI Crafting Integration** | roridev | `1.3.1` | [CurseForge](https://www.curseforge.com/projects/923210) |
 | **AE2 Things [Forge]** | ProjectET, Technici4n | `1.2.1` | [CurseForge](https://www.curseforge.com/projects/609977) |
-| **Alex's Delight** | NCP Bails | `1.5` | [CurseForge](https://www.curseforge.com/projects/556448) |
-| **Alex's Mobs** | Alexthe668, Carro1001, Paint_Ninja | `1.22.9` | [CurseForge](https://www.curseforge.com/projects/426558) |
+| **AI Improvements** | BuiltBrokenModding | `0.5.2` | [CurseForge](https://www.curseforge.com/projects/233019) |
 | **AllTheLeaks (Memory Leak Fix)** | Uncandango | `1.1.1+1.20.1-forge` | [CurseForge](https://www.curseforge.com/projects/1091339) |
 | **AmbientSounds 6** | CreativeMD, AriaFreeze | `6.3.4` | [CurseForge](https://www.curseforge.com/projects/254284) |
 | **AppleSkin** | squeek | `2.5.1+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/248787) |
@@ -44,8 +43,10 @@
 | **Cloth Config API (Fabric/Forge/NeoForge)** | shedaniel | `11.1.136` | [CurseForge](https://www.curseforge.com/projects/348521) |
 | **Clumps** | Jaredlll08 | `12.0.0.4` | [CurseForge](https://www.curseforge.com/projects/256717) |
 | **Collective** | Rick South | `8.13` | [CurseForge](https://www.curseforge.com/projects/342584) |
+| **Combat Roll [Fabric & Forge]** | Daedelus | `1.3.3+1.20.1` | [CurseForge](https://www.curseforge.com/projects/678036) |
 | **Controlling** | Jaredlll08 | `12.0.2` | [CurseForge](https://www.curseforge.com/projects/250398) |
 | **CoroUtil** | Corosus | `1.20.1-1.3.7` | [CurseForge](https://www.curseforge.com/projects/237749) |
+| **Corpse** | Max Henkel | `1.20.1-1.0.23` | [CurseForge](https://www.curseforge.com/projects/316582) |
 | **Cosmetic Armor Reworked** | zlainsama | `1.20.1-v1a` | [CurseForge](https://www.curseforge.com/projects/237307) |
 | **Crafting on a stick** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/577850) |
 | **CraftTweaker** | Jaredlll08, Kindlich, StanHebben and TheSilkMiner | `14.0.59` | [CurseForge](https://www.curseforge.com/projects/239197) |
@@ -66,6 +67,8 @@
 | **EMI** | Emi | `1.1.22+1.20.1+forge` | [CurseForge](https://www.curseforge.com/projects/580555) |
 | **EMI Enchanting** | fzzyhmstrs | `0.1.2+1.20.1+forge` | [CurseForge](https://www.curseforge.com/projects/936713) |
 | **EMI Loot** | fzzyhmstrs, lxly9 (art), unilock (ports) | `0.7.9+1.20.1+forge` | [CurseForge](https://www.curseforge.com/projects/681783) |
+| **EMI professions (EMIP)** | Mrbysco, ShyNieke | `1.0.4` | [CurseForge](https://www.curseforge.com/projects/1065904) |
+| **EMI Trades (Villager Trading EMI Plugin)** | Prismwork, Flamarine | `1.2.1+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/735523) |
 | **EMIffect (Status Effects EMI Plugin)** | Prismwork, Flamarine | `1.1.2+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/735528) |
 | **Emojiful** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/284324) |
 | **Enchantment Descriptions** | Darkhax | `17.1.21` | [CurseForge](https://www.curseforge.com/projects/250419) |
@@ -90,12 +93,14 @@
 | **FTB Ranks (NeoForge)** | FTB Team | `2001.1.7` | [CurseForge](https://www.curseforge.com/projects/314905) |
 | **FTB Teams (NeoForge)** | FTB Team | `2001.3.2` | [CurseForge](https://www.curseforge.com/projects/404468) |
 | **Fzzy Config** | fzzyhmstrs | `0.7.6+1.20.1+forge` | [CurseForge](https://www.curseforge.com/projects/1005914) |
+| **GlitchCore** | Adubbz | `0.0.1.1` | [CurseForge](https://www.curseforge.com/projects/955399) |
 | **Glodium** | GlodBlock | `1.20-1.5-forge` | [CurseForge](https://www.curseforge.com/projects/957920) |
-| **GraveStone Mod** | Max Henkel | `1.20.1-1.0.35` | [CurseForge](https://www.curseforge.com/projects/238551) |
 | **GroovyModLoader (GML)** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/661517) |
 | **GuideME** | shartte | `20.1.14` | [CurseForge](https://www.curseforge.com/projects/1173950) |
+| **Handcrafted** | Alex Nijjar, Kekie6 | `3.0.6` | [CurseForge](https://www.curseforge.com/projects/538214) |
 | **Iceberg [Neo/Forge]** | Grend | `1.1.25` | [CurseForge](https://www.curseforge.com/projects/520110) |
 | **ImmediatelyFast** | RK_01 | `1.5.4+1.20.4` | [CurseForge](https://www.curseforge.com/projects/686911) |
+| **In Control!** | McJty | `1.20-9.4.6` | [CurseForge](https://www.curseforge.com/projects/257356) |
 | **Iron Chests** | cpw, alexbegt, progwml6 | `1.20.1-14.4.4` | [CurseForge](https://www.curseforge.com/projects/228756) |
 | **Iron Furnaces** | Qelifern (pizzaatime), XenoMustache | `4.1.6` | [CurseForge](https://www.curseforge.com/projects/237664) |
 | **Item Highlighter [Neo/Forge]** | Grend | `1.1.9` | [CurseForge](https://www.curseforge.com/projects/521590) |
@@ -108,7 +113,7 @@
 | **KubeJS** | LatvianModder | `2001.6.5-build.16` | [CurseForge](https://www.curseforge.com/projects/238086) |
 | **LambDynamicLights** | LambdAurora | `4.4.0+1.20.1` | [CurseForge](https://www.curseforge.com/projects/393442) |
 | **LibX** | ModdingX | `1.20.1-5.0.14` | [CurseForge](https://www.curseforge.com/projects/412525) |
-| **Light Overlay (Rift/Forge/Fabric)** | shedaniel | `8.0.0` | [CurseForge](https://www.curseforge.com/projects/325492) |
+| **LootJS: KubeJS Addon** | AlmostReliable | `1.20.1-2.13.1` | [CurseForge](https://www.curseforge.com/projects/570630) |
 | **ME Requester** | Almost Reliable | `1.20.1-1.1.5` | [CurseForge](https://www.curseforge.com/projects/688367) |
 | **MEGA Cells** | 90 | `2.4.6-1.20.1` | [CurseForge](https://www.curseforge.com/projects/622112) |
 | **Mekalus (Oculus fork with fixed Mekanism MekaSuit rendering)** | KostromDan, NanoLive, dima_dencep, coderbot, IMS212, Justsnoopy30, FoundationGames | `1.8.0.1` | [CurseForge](https://www.curseforge.com/projects/1130957) |
@@ -120,8 +125,10 @@
 | **Mod Menu** | Prospector, haykam821, TerraformersMC | `7.2.2` | [CurseForge](https://www.curseforge.com/projects/308702) |
 | **ModernFix** | embeddedt | `5.26.2+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/790626) |
 | **Moonlight Lib** | MehVahdJukaar | `1.20-2.16.28` | [CurseForge](https://www.curseforge.com/projects/499980) |
+| **More Overlays Updated** | feldim2425, RiDGo8/R8420 | `1.24.1` | [CurseForge](https://www.curseforge.com/projects/391382) |
 | **Mouse Tweaks** | Ivan Molodetskikh (YaLTeR) | `2.25.1` | [CurseForge](https://www.curseforge.com/projects/60089) |
 | **Neat** | Vazkii | `1.20.1-41-FORGE` | [CurseForge](https://www.curseforge.com/projects/238372) |
+| **No Chat Reports** | Aizistral | `1.20.1-v2.2.2` | [CurseForge](https://www.curseforge.com/projects/634062) |
 | **Oculus** | NanoLive, dima_dencep, coderbot, IMS212, Justsnoopy30, FoundationGames | `1.8.0` | [CurseForge](https://www.curseforge.com/projects/581495) |
 | **Overflowing Bars** | Fuzs | `8.0.1` | [CurseForge](https://www.curseforge.com/projects/852662) |
 | **Packet Fixer** | TonimatasDEV | `3.3.1` | [CurseForge](https://www.curseforge.com/projects/689467) |
@@ -130,6 +137,7 @@
 | **Pick Up Notifier** | Fuzs | `8.0.0` | [CurseForge](https://www.curseforge.com/projects/351441) |
 | **Ping Wheel** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/734339) |
 | **Placebo** | Shadows_of_Fire | `8.6.3` | [CurseForge](https://www.curseforge.com/projects/283644) |
+| **playerAnimator** | KosmX | `1.0.2-rc1+1.20` | [CurseForge](https://www.curseforge.com/projects/658587) |
 | **PneumaticCraft: Repressurized** | desht, MineMaarten | `6.0.22+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/281849) |
 | **Polymorph (Fabric/Forge/Quilt)** | Illusive Soulworks | `0.49.10+1.20.1` | [CurseForge](https://www.curseforge.com/projects/388800) |
 | **Polymorphic Energistics** | 90 | `0.1.1-1.20.1` | [CurseForge](https://www.curseforge.com/projects/941096) |
@@ -141,6 +149,7 @@
 | **Resourceful Lib** | ThatGravyBoat, Epic_Oreo | `2.1.29` | [CurseForge](https://www.curseforge.com/projects/570073) |
 | **Rhino** | latvian.dev, Mozilla | `2001.2.3-build.10` | [CurseForge](https://www.curseforge.com/projects/416294) |
 | **Searchables** | Jaredlll08 | `1.0.3` | [CurseForge](https://www.curseforge.com/projects/858542) |
+| **Serene Seasons** | Adubbz, Forstride | `9.1.0.2` | [CurseForge](https://www.curseforge.com/projects/291874) |
 | **ShatterLib \| OctoLib** | OctoStudios | `0.5.0.1` | [CurseForge](https://www.curseforge.com/projects/916747) |
 | **Simple Backups** | MelanX | `1.20.1-3.1.24` | [CurseForge](https://www.curseforge.com/projects/583228) |
 | **Simple Discord Rich Presence (Forge /  Fabric)** | Sunekaer | `4.0.3-build.40+mc1.20.1` | [CurseForge](https://www.curseforge.com/projects/334853) |
@@ -158,6 +167,7 @@
 | **Stylish Effects** | Unknown | `Unknown` | [CurseForge](https://www.curseforge.com/projects/543661) |
 | **SuperMartijn642's Config Lib** | SuperMartijn642 | `1.1.8` | [CurseForge](https://www.curseforge.com/projects/438332) |
 | **Tips** | Darkhax | `12.1.9` | [CurseForge](https://www.curseforge.com/projects/306549) |
+| **Too Fast** | Noobanidus | `0.4.3.5` | [CurseForge](https://www.curseforge.com/projects/550678) |
 | **Tool Belt** | gigaherz | `1.20.02` | [CurseForge](https://www.curseforge.com/projects/260262) |
 | **Torchmaster** | Xalcon | `20.1.9` | [CurseForge](https://www.curseforge.com/projects/254268) |
 | **Trinkets (Fabric)** | Emi, C4 | `3.7.2` | [CurseForge](https://www.curseforge.com/projects/341284) |
